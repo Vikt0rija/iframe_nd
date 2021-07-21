@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('https://images.iphonephotographyschool.com/7805/708/Low-Light-iPhone-Photos-5.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>RADIOHEAD</p>
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <p>Concert</p>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+
+  </div>
+</div>
+
+<script>
+var countDownDate = new Date("Jul 22, 2021 22:00:00").getTime();
+var countdownfunction = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  background-image: url('https://www.xsnoize.com/wp-content/uploads/2016/05/Radiohead-new.jpg');
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="parallax"></div>
+<div style="height:2000px;background-color:LIGHTGRAY;font-size:25px">
+  <div style="text-align:center;">
+
+   <p style="font-size:50px">&#127757;</p>
+<iframe
+width="700"
+height="300"
+frameborder="0"
+scrolling="no"
+marginheight="0"
+marginwidth="0"
+src="https://www.openstreetmap.org/export/embed.html?bbox=24.845581054687504%2C54.56847919504376%2C25.72860717773438%2C54.83273178796605&amp;layer=mapnik"
+style="border: 1px solid black"></iframe><br/><small>
+  <a href="https://www.openstreetmap.org/#map=11/54.7008/25.2871">Location</a></small>
+
+
+  <p style="font-size:50px">&#127916;</p>
+<iframe
+width="700"
+height="300"
+src="https://www.youtube.com/embed/ze2gL1RlXDE"
+title="YouTube video player"
+frameborder="10"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+
+<p style="font-size:50px">&#127911;</p>
+<iframe
+style="align: center"
+width="47%"
+height="300"
+scrolling="no"
+frameborder="no"
+allow="autoplay"
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162464778&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"> </iframe>
+</div>
+
+<div class="parallax"></div>
+
+</body>
+</html>
